@@ -16,6 +16,7 @@ class Extract
 
         $file_ext  = pathinfo($filename, PATHINFO_EXTENSION);
         if ($file_ext == "pdf") {
+            // The pdftotext path should be removed or replaced with your pdftotext system path
             return  (new Pdf('C:/Program Files/Git/mingw64/bin/pdftotext'))
             ->setPdf($filename)
             ->text();
